@@ -2,8 +2,6 @@ package testcases;
 
 import java.util.Properties;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -21,12 +19,11 @@ import utils.DateTimeUtils;
 import utils.ReportUtils;
 
 public class BaseTest {
-	
-	
+
 	CommonDriver cmnDriver;
 
 	WebDriver driver;
-	
+
 	HomePage homepage;
 
 	ReportUtils reportUtils;
@@ -37,20 +34,15 @@ public class BaseTest {
 
 	ScreenshotControl screenshotControl;
 
-
 	static Properties configProperties;
 
 	private static String configFilename;
 
-
 	static {
-		
+
 		projectDirectory = System.getProperty("user.dir");
 
-		
 		configFilename = String.format("%s/config/%s", projectDirectory, "config.properties");
-
-		
 
 		try {
 

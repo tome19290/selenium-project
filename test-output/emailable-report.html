@@ -9,10 +9,56 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Amazon Test Suite</th></tr>
-<tr><td><a href="#t0">Homepage tests</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">7,086</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Homepage tests</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">1,575</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Amazon Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Homepage tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testcases.TestHomepage</td><td><a href="#m0">verifyHomepageText</a></td><td rowspan="1">1658379811325</td><td rowspan="1">199</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Amazon Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Homepage tests &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="2">testcases.TestHomepage</td><td><a href="#m0">cleanUp</a></td><td rowspan="1">1658399520697</td><td rowspan="1">5</td></tr><tr class="failedeven"><td><a href="#m1">setup</a></td><td rowspan="1">1658399519178</td><td rowspan="1">1412</td></tr><tr><th colspan="4">Homepage tests &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">testcases.TestHomepage</td><td><a href="#m2">verifyHomepageText</a></td><td rowspan="1">1658399520662</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Homepage tests</h2><h3 id="m0">testcases.TestHomepage#verifyHomepageText</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Homepage tests</h2><h3 id="m0">testcases.TestHomepage#cleanUp</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name={null} status=CREATED method=TestHomepage.verifyHomepageText()[pri:0, instance:testcases.TestHomepage@3c407114] output={null}]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;commonLibs.CommonDriver.closeAllBrowser()&quot; because &quot;this.cmnDriver&quot; is null
+	at testcases.BaseTest.closeBrowerInstance(BaseTest.java:146)
+	at testcases.BaseTest.cleanUp(BaseTest.java:103)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testcases.TestHomepage#setup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:585)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:248)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:164)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:106)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:93)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:48)
+	at commonLibs.CommonDriver.&lt;init&gt;(CommonDriver.java:42)
+	at testcases.BaseTest.openBrowserAndNavigateToAUrl(BaseTest.java:121)
+	at testcases.BaseTest.setup(BaseTest.java:81)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;Saurabhs-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:79:1367:8029:b184%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.4&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: CommonDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:226)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	... 41 more
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testcases.TestHomepage#verifyHomepageText</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:585)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:248)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:164)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:106)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:93)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:48)
+	at commonLibs.CommonDriver.&lt;init&gt;(CommonDriver.java:42)
+	at testcases.BaseTest.openBrowserAndNavigateToAUrl(BaseTest.java:121)
+	at testcases.BaseTest.setup(BaseTest.java:81)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;Saurabhs-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:79:1367:8029:b184%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.4&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: CommonDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:226)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	... 41 more
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
