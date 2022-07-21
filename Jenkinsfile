@@ -5,7 +5,7 @@ pipeline {
         stage('Setup') {
             steps {
                 
-                sh "install_driver.sh"
+                sh "./install_driver.sh"
 
             }
         }
