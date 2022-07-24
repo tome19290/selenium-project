@@ -47,7 +47,10 @@ public class CommonDriver {
 			
 			ChromeOptions chromeOptions = new ChromeOptions();
 			
-			chromeOptions.addArguments("--headless");
+			chromeOptions.addArguments("--no-sandbox");
+            chromeOptions.addArguments("--headless"); 
+            chromeOptions.addArguments("--disable-dev-shm-usage");
+            chromeOptions.addArguments("--disable-gpu");
 
 			driver = new ChromeDriver(chromeOptions);
 
